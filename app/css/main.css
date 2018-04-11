@@ -136,6 +136,9 @@ html, body{
 	margin: 0;
 }
 
+.pix2{
+	margin-top: -2px;
+}
 .navigation-list-item{
 	width: 230px;
 	line-height: 0.86;
@@ -328,7 +331,7 @@ html, body{
 .main-info-container{
 	padding-left: 55px;
 	padding-right: 55px;
-	padding-bottom: 44px;
+	padding-bottom: 30px;
 }
 .avatar-container{
 	float: left;
