@@ -112,3 +112,65 @@
 	background:rgb(129, 142, 155, 0.5);
 	overflow: hidden;
 }
+
+.popup-container{
+	width: 362px;
+	margin: 0 auto;
+	margin-top: 315px;
+}
+
+.popup-header{
+	background: #48cbe8;
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+	border-bottom:9px solid #67dffa;
+}
+
+.popup-title{
+	color: #fff;
+	font-family: 'fira_sansregular';
+	font-size: 25px;
+	float: left;
+	padding-top: 12px;
+	padding-left: 13px;
+	line-height: 25px;
+}
+
+.popup-close{
+	float: right;
+	margin-top: 10px;
+	margin-right: 12px;
+	margin-bottom: 9px;
+	cursor: pointer;
+}
+
+.popup-form{
+	background: #eff3f7;
+	padding-left: 20px;
+	padding-top: 6px;
+}
+
+.popup-form-element{
+	margin-bottom: 6px;
+}
+
+.popup-form-title{
+	font-family: 'fira_sansbook';
+	font-size: 17px;
+	color: #959aa8;
+}
+
+.popup-form-input{
+	border: 1px solid #48cbe8;
+	border-radius: 5px;
+	width: 318px;
+	height: 38px;
+}
+
+.popup-form-input::placeholder{
+	color: #54cee9;
+	padding-left:9px;
+	font-family: 'fira_sanslight';
+	font-size: 13px;
+
+}
