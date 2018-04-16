@@ -21,7 +21,22 @@
 				</div>
 				<div class="popup-form-element">
 					<div class="popup-form-title">Картинка проекта</div>
-					<input type="file" class="popup-form-input" placeholder="Введите название">
+					<div class="popup-form-input clearfix">
+						<span class="popup-form-input-value">Загрузите изображение</span>
+						<input type="file" class="hide" id="inputfile" placeholder="Введите название">
+						<label class="popup-form-input-file" for="inputfile"></label>
+					</div>
+				</div>
+				<div class="popup-form-element">
+					<div class="popup-form-title">URL проекта</div>
+					<input type="text" class="popup-form-input" placeholder="Добавьте ссылку">
+				</div>
+				<div class="popup-form-element">
+					<div class="popup-form-title">Описание</div>
+					<textarea class=" popup-form-textarea" placeholder="Пара слов о Вашем проекте"></textarea>
+				</div>
+				<div class="popup-form-submit-container">
+					<input type="submit" class="popup-submit-button" value="Добавить">
 				</div>
 			</form>
 		</div>
