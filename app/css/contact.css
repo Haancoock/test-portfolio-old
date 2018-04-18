@@ -1,0 +1,17 @@
+
+.contact-container-padding{
+	padding-top: 0px;
+}
+
+.contact-header{
+	display: block;
+	background: #48cbe8;
+	border-bottom: 17px solid #67dffa;
+	color: #fff;
+	font-family: 'fira_sansbook';
+	font-size: 27px;
+	line-height: 20px;
+	padding-top:51px;
+	padding-bottom: 51px;
+	padding-left: 58px;
+}
