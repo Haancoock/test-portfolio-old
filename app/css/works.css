@@ -111,7 +111,7 @@
 	height: 100%;
 	background:rgb(129, 142, 155, 0.5);
 	overflow: hidden;
-	/*display: none;*/
+	display: none;
 }
 
 .popup-container{
@@ -119,6 +119,7 @@
 	margin: 0 auto;
 	margin-top: 315px;
 	box-shadow: 0 0 10px rgba(0,0,0,0.6);
+	display: none;
 }
 
 .popup-header{
@@ -266,6 +267,7 @@
 	border-bottom: none;
 	border-top:3px solid #3ba8c0;
 }
+/*===========================POPUP ERROR=============================*/
 
 .popup-error-container{
 	background: rgba(242, 204, 205, 1);
@@ -274,6 +276,7 @@
 	border-radius: 5px;
 	margin-bottom: 5px;
 	padding-top: 7px;
+	display: none;
 }
 
 .popup-error-text{
@@ -294,6 +297,54 @@
 	font-family: 'fira_sansbook';
 	font-size: 15px;
 	color: #f97e76;
+	display: block;
+	line-height: 14px;
+}
+.popup-error-close-button{
+	margin-right: 5px;
+}
+.popup-error-close-button{
+	float: right;
+}
+
+/*=====================ADDED ALERT==================================*/
+.popup-addalert-container{
+	background: #b8e1ce;
+	width: 320px;
+	border: 1px solid #49bb7b;
+	border-radius: 5px;
+	padding-top: 7px;
+
+}
+.popup-addalert-content{
+	width: 320px;
+	margin: 0 auto;
+	margin-top: 505px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.6);
+	background: #eff3f7;
+	padding: 21px;
+	border-radius: 4px;
+	display: none;
+}
+
+.popup-addalert-text{
+	float: left;
+	padding-left: 9px;
+	margin-bottom: 9px;
+}
+.popup-addalert-header-text{
+	font-family: 'fira_sansbook';
+	font-size: 25px;
+	color: #58c086;
+	display: block;
+	margin-bottom: 6px;
+	line-height: 25px;
+}
+
+.popup-addalert-descript-text{
+	font-family: 'fira_sansbook';
+	font-size: 15px;
+	color: #58c086;
 	display: block;
 	line-height: 14px;
 }
