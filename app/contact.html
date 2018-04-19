@@ -29,7 +29,7 @@
 						<ul class="navigation-list">
 							<li class="navigation-list-item "><a href="index.html" class="navigation-link ">Обо мне</a></li>
 							<li class="navigation-list-item"><a href="works.html" class="navigation-link">Мои работы</a></li>
-							<li class="navigation-list-item active-nav pix2"><a href="contact.html" class="navigation-link active-nav">Связаться со мной</a></li>
+							<li class="navigation-list-item active-nav pix4"><a href="contact.html" class="navigation-link active-nav">Связаться со мной</a></li>
 						</ul>
 					</nav>
 					<div class="contacts">
@@ -68,29 +68,28 @@
 					<div class="main-content-container contact-container-padding">
 						<span class="contact-header">У вас интересный проект? Напишите мне</span>
 						<form action="" class="contact-content-form">
-							<div class="contact-info-container">
-								<div class="contact-info-element">
+							<div class="contact-info-container clearfix">
+								<div class="contact-info-element float-left">
 									<span class="contact-head-text">Имя</span>
-									<input type="text" class="contact-input">
+									<input type="text" class="contact-input" placeholder="Как к Вам обращаться">
 								</div>
-								<div class="contact-info-element">
+								<div class="contact-info-element float-right">
 									<span class="contact-head-text">Email</span>
-									<input type="text" class="contact-input">
+									<input type="text" class="contact-input" placeholder="Куда мне писать">
 								</div>
 							</div>
-
-							<div class="contact-info-element">
+							<div class="contact-info-textarea">
 								<span class="contact-head-text">Сообщение</span>
-								<textarea name="" id="" cols="30" rows="10" class="contact-msg"></textarea>
+								<textarea name="" id="" cols="30" rows="10" class="contact-msg" placeholder="Кратко в чем суть"></textarea>
 							</div>
-							<div class="contact-info-container">
-								<span class="contact-head-text"></span>
-								<img src="" alt="" class="contact-captha">
-								<input type="text" class="contact-captha-code">
+							<div class="contact-info-container clearfix mbot">
+								<span class="contact-head-text pix17">Введите код, указанный на картинке</span>
+								<img src="" alt="" class="contact-captcha">
+								<input type="text" class="contact-captcha-code" placeholder="Введите код">
 							</div>
-							<div class="contact-buttons">
-								<input type="button" class="contact-submit-button">
-								<input type="reset" class="contact-reset-button">
+							<div class="contact-buttons clearfix">
+								<input type="submit" class="contact-submit-button float-left" value="Отправить">
+								<input type="reset" class="contact-reset-button float-right" value="Очистить">
 							</div>
 						</form>
 				</div> 
