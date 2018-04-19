@@ -57,6 +57,7 @@
 	background: rgba(65, 145, 185, 0.3);
 	text-align: center;
 	opacity: 0;
+	transition-duration: 0.5s;
 }
 .work-site-back:hover{
 	opacity: 1;
