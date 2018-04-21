@@ -121,8 +121,8 @@
 }
 
 .contact-captcha-code:focus::placeholder{
-	transition: opacity 0.3s ease;
 	opacity:0;
+	transition: opacity 0.3s ease;
 }
 
 .contact-submit-button{

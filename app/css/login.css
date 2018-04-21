@@ -57,13 +57,13 @@
 	padding-left: 19px;
 	font-size: 17px;
 	outline: none;
-	opacity: 1;
-	transition: opacity 0.3s ease;
 }
 
 .login-form-input::placeholder{
 	font-family: 'fira_sanslight';
 	color: #48cbe8;
+	opacity:1px;
+	transition: opacity 0.3s ease;
 }
 
 .login-form-input:focus::placeholder{
