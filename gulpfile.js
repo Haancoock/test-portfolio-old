@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 		browserSync({
 			port: 3000,
 			server:{
-				baseDir: 'app'
+				baseDir: '.'
 			}
 		});
 	});
