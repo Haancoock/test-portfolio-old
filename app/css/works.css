@@ -374,4 +374,5 @@
 }
 .popup-error-close-button{
 	float: right;
+	cursor: pointer;
 }

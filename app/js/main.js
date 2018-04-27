@@ -7,7 +7,8 @@ var myModule = (function(){
 	var _setUpListners = function(){
 		$('.work-site-add-container').on('click', _showPopup);
 		$('.popup-form').on('submit', _addProject);
-
+		$('.hide').on('change', _imgUpload);
+		$('.close-alert').on('click', _closeAlerts);
 		};
 
 	var _showPopup = function(e){
@@ -17,10 +18,23 @@ var myModule = (function(){
 			onClose: function(){
 				$('.popup-error-container').hide();
 				$('.popup-addalert-content').hide();
-				
+				$('.input-val').val('');
 			}
 		});
 	};
+
+	var _closeAlerts = function(){
+		var closeButton = $('.close-alert');
+		closeButton.closest('.alert-box').hide();
+	}
+
+
+	var _imgUpload = function(e){
+		var imgText = $('.hide').val();
+		var imgVal = $('#img');
+		imgVal.val(imgText);
+		console.log(imgText);
+	}
 
 	var _ajaxForm = function(url, form){
 		var url = url,
