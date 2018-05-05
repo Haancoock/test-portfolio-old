@@ -3,9 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="shortcut icon" type="image/gif"  href="images/favicon.ico">
-	<link rel="stylesheet" type="text/html" href="../../node_modules/normalize-css/normalize.css">
+	<!--build:css css/vendor.min.css -->
+	<link rel="stylesheet" type="text/html" href="components/normalize.css">
+	<!--endbuild -->
+
+	<!--build:css css/style.min.css -->
+	<link rel="stylesheet" href="css/login.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/works.css">
+	<link rel="stylesheet" href="css/contact.css">
+	<!--endbuild-->
+
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Portfolio</title>
 </head>
@@ -190,8 +198,14 @@
 
 	
 </div>
-	<script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
-	<script src="js/main.js"></script>
+	<!--build:js js/vendor.min.js -->
+	<script type="text/javascript" src="components/jquery.min.js"></script>
 	<script src="js/bpopup.js"></script>
+	<!--endbuild-->
+
+	<!--build:js js/default.min.js-->
+	<script src="js/main.js"></script>
+	<!--endbuild-->
+	
 </body>
 </html>

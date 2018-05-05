@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" type="image/gif"  href="images/favicon.ico">
+	<link rel="stylesheet" href="css/vendor.min.css">
+
+	<link rel="stylesheet" href="css/style.min.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Portfolio</title>
+</head>
+<body>
+	<div id="addNewItem" class="popup-wrapper">
+		<div class="popup-addalert-content alert-box">
+			<div class="popup-addalert-container  clearfix">
+				<div class="popup-addalert-text ">
+					<span class="popup-addalert-header-text">Ура!</span>
+					<span class="popup-addalert-descript-text">Проект успешно добавлен.</span>
+				</div>
+				<img src="images/close-green.png" alt="" class="popup-error-close-button close-alert">
+			</div>
+		</div>
+		<div class="popup-container">
+			<div class="popup-header clearfix">
+				<span class="popup-title">Добавление проекта</span>
+				<img src="images/close-popup.png" alt="" class="popup-close b-close">
+			</div>
+			<form action="add_project.php" class="popup-form">
+				
+				<div class="popup-error-container clearfix alert-box">
+					<div class="popup-error-text ">
+						<span class="popup-error-header-text">Ошибка!</span>
+						<span class="popup-error-descript-text">Невозможно добавить проект.</span>
+					</div>
+					<img src="images/close1.png" alt="" class="popup-error-close-button close-alert">
+				</div>
+				<div class="popup-form-element">
+					<div class="popup-form-title">Название проекта</div>
+					<input type="text" class="popup-form-input input-val" name="projectName" placeholder="Введите название">
+				</div>
+				<div class="popup-form-element">
+					<div class="popup-form-title">Картинка проекта</div>
+					<div class="popup-form-input clearfix">
+						<input type="text" class="popup-form-input-value input-val" id="img" name="img"  placeholder="Загрузите изображение">
+						<input type="file" class="hide"  id="inputfile">
+						<label class="popup-form-input-file" for="inputfile"></label>
+					</div>
+				</div>
+				<div class="popup-form-element">
+					<div class="popup-form-title">URL проекта</div>
+					<input type="text" class="popup-form-input input-val" name="projectURL" placeholder="Добавьте ссылку">
+				</div>
+				<div class="popup-form-element">
+					<div class="popup-form-title">Описание</div>
+					<textarea class=" popup-form-textarea input-val" name="projectDescr" placeholder="Пара слов о Вашем проекте"></textarea>
+				</div>
+				<div class="popup-form-submit-container">
+					<input type="submit" class="popup-submit-button" value="Добавить">
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="wrapper">
+
+		<header class="header">
+			<div class="container clearfix">
+				<a href="index.html" class="logo">
+					<img src="images/logo.png" alt="" class="logo-img">
+				</a>
+				<ul class="socials">
+					<li class="socials-item"><a href="http://vk.com" target="_blank" class="socials-item-link vk"></a></li>
+					<li class="socials-item"><a href="http://twitter.com" class="socials-item-link tweet" target="_blank"></a></li>
+					<li class="socials-item"><a href="http://facebook.com" class="socials-item-link fb" target="_blank"></a></li>
+					<li class="socials-item"><a href="http://github.com" class="socials-item-link git" target="_blank"></a></li>
+				</ul>
+			</div>
+		</header>
+		<main class="main">
+			<div class="main-container clearfix">
+				<aside class="sidebar">
+					<nav class="navigation">
+						<ul class="navigation-list">
+							<li class="navigation-list-item"><a href="index.html" class="navigation-link">Обо мне</a></li>
+							<li class="navigation-list-item active-nav pix2"><a href="works.html" class="navigation-link active-nav">Мои работы</a></li>
+							<li class="navigation-list-item"><a href="contact.html" class="navigation-link">Связаться со мной</a></li>
+						</ul>
+					</nav>
+					<div class="contacts">
+						<h2 class="contacts-header">
+							Контакты
+						</h2>
+						<ul class="contacts-list">
+							<li class="contact-list-item mail-item clearfix">
+								<div class="contacts-maillogo">
+									
+								</div>
+								<a href="mailto:example@link.com" class="contacts-mail">
+									pochta@mail.ru
+								</a>
+							</li>
+							<li class="contact-list-item phone-item clearfix">
+								<div class="contacts-phonelogo">
+									
+								</div>
+								<a href="tel:+9123125324" class="contacts-phone">
+									+123456789123
+								</a>
+							</li>
+							<li class="contact-list-item skype-item clearfix">
+								<div class="contacts-skypelogo">
+									
+								</div>
+								<a href="skype:example" class="contacts-skype">
+									nickname
+								</a>
+							</li>
+						</ul>
+					</div>
+				</aside>
+				<section class="main-content">
+					<div class="main-content-container">
+					<span class="main-head">Мои работы</span>
+					<div class="underline"> </div>
+					<div class="works-container">
+						<div class="works-element-container">
+							<div class="work-site-container">
+								<div class="work-site-back">
+									<a href="123" class="site-works-link-in">www.site.com</a>
+								</div>
+							</div>
+							<a href="" class="works-site-link">www.site.ru</a>
+							<span class="works-site-descript">Информация о проекте 1 превью 2 строки</span>
+						</div>
+						<div class="works-element-container">
+							<div class="work-site-container">
+								<div class="work-site-back">
+									<a href="123" class="site-works-link-in">www.site.com</a>
+								</div>
+							</div>
+							<a href="" class="works-site-link">www.site.ru</a>
+							<span class="works-site-descript">Информация о проекте 1 превью 2 строки</span>
+						</div>
+						<div class="works-element-container">
+							<div class="work-site-container">
+								<div class="work-site-back">
+									<a href="123" class="site-works-link-in">www.site.com</a>
+								</div>
+							</div>
+							<a href="" class="works-site-link">www.site.ru</a>
+							<span class="works-site-descript">Информация о проекте 1 превью 2 строки</span>
+						</div>
+						<div class="works-element-container">
+							<div class="work-site-container">
+								<div class="work-site-back">
+									<a href="123" class="site-works-link-in">www.site.com</a>
+								</div>
+							</div>
+							<a href="" class="works-site-link">www.site.ru</a>
+							<span class="works-site-descript">Информация о проекте 1 превью 2 строки</span>
+						</div>
+						<div class="works-element-container">
+							<div class="work-site-container">
+								<div class="work-site-back">
+									<a href="123" class="site-works-link-in">www.site.com</a>
+								</div>
+							</div>
+							<a href="" class="works-site-link">www.site.ru</a>
+							<span class="works-site-descript">Информация о проекте 1 превью 2 строки</span>
+						</div>
+
+						<div class="works-element-container">
+							<div class="work-site-add-container">
+								<a href="" class="work-site-add-link">
+								<img src="images/add-proj.png" alt="" class="work-site-add-img">
+								Добавить проект</a>
+							</div>
+						</div>
+					</div>
+					</div>
+				</section>
+			</div>
+		</main>
+		<footer class="footer">
+		<div class="main-container clearfix">
+			<a href="login.html" class="footer-lock"> </a>
+			<span class="footer-copyright">&copy 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его</span>
+		</div>
+		
+	</footer>
+
+	
+</div>
+	<script src="js/vendor.min.js"></script>
+
+	<script src="js/default.min.js"></script>
+	
+</body>
+</html>
