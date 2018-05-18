@@ -1,9 +1,10 @@
 var myModule = (function(){
-	
+
 
 	var init = function(){
 		_setUpListners();
 		};
+	
 	var _setUpListners = function(){
 		$('.work-site-add-container').on('click', _showPopup);
 		$('.popup-form').on('submit', _addProject);
@@ -48,6 +49,7 @@ var myModule = (function(){
 		}).fail(function(){
 			console.log('Проблемы в PHP');
 			$('.popup-error-container').show();
+
 		})
 
 		return result;
@@ -62,10 +64,11 @@ var myModule = (function(){
 
 
 		servAnswer.done(function(ans) {
-			console.log("success");
+			console.log('servAnswer sucsess');
 			if (ans.mes === 'error') {
 				$('.popup-error-container').show();
 				$('.popup-addalert-content').hide();
+				console.log('Давай по новой Миша, всё хуйня..');
 			}else{
 				$('.popup-addalert-content').show();
 				$('.popup-error-container').hide();
