@@ -162,6 +162,7 @@
 .popup-form-element{
 	margin-bottom: 6px;
 	width: 320px;
+	position: relative;
 }
 
 .popup-form-title{
@@ -219,7 +220,7 @@
 	height: 20px;
 	border:none;
 	outline: none;
-	background: #fff;
+	background: transparent;
 
 }
 
@@ -230,6 +231,11 @@
 	font-family: 'fira_sanslight';
 	font-size: 13px;
 	opacity: 1;
+	transition: opacity 0.3s ease;
+}
+
+.popup-form-input-value:focus::placeholder{
+	opacity: 0;
 	transition: opacity 0.3s ease;
 }
 

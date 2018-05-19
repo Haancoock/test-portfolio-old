@@ -20,6 +20,8 @@ var myModule = (function(){
 				$('.popup-error-container').hide();
 				$('.popup-addalert-content').hide();
 				$('.input-val').val('');
+				$('.qtip-container').hide();
+				$('.popup-form-input, .popup-form-textarea').removeClass('qtip-error');
 			}
 		});
 	};
@@ -38,6 +40,7 @@ var myModule = (function(){
 	}
 
 	var _ajaxForm = function(url, form){
+		if (!validation.validateForm(form)) return false;
 		var url = url,
 			data = form.serialize();
 

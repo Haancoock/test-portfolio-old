@@ -5,7 +5,7 @@
 	<link rel="shortcut icon" type="image/gif"  href="images/favicon.ico">
 	<!--build:css css/vendor.min.css -->
 	<link rel="stylesheet" type="text/html" href="components/normalize.css">
-	<link rel="stylesheet" href="text/html" href="components/jquery.qtip.css">
+	<!-- <link rel="stylesheet" href="text/html" href="components/jquery.qtip.css"> -->
 	<!--endbuild -->
 
 	<!--build:css css/style.min.css -->
@@ -44,10 +44,18 @@
 					<img src="images/close1.png" alt="" class="popup-error-close-button close-alert">
 				</div>
 				<div class="popup-form-element">
+					<div class="qtip-container">
+						введите название
+						<div class="qtip-arrow"></div>
+					</div>
 					<div class="popup-form-title">Название проекта</div>
-					<input type="text" class="popup-form-input input-val" name="projectName" placeholder="Введите название">
+					<input type="text" qtip-content="Введите название" class="popup-form-input input-val" name="projectName" placeholder="Введите название">
 				</div>
 				<div class="popup-form-element">
+					<div class="qtip-container">
+						картинку
+						<div class="qtip-arrow"></div>
+					</div>
 					<div class="popup-form-title">Картинка проекта</div>
 					<div class="popup-form-input clearfix">
 						<input type="text" class="popup-form-input-value input-val" id="img" name="img"  placeholder="Загрузите изображение">
@@ -56,10 +64,18 @@
 					</div>
 				</div>
 				<div class="popup-form-element">
+					<div class="qtip-container">
+						ссылка на проект
+						<div class="qtip-arrow"></div>
+					</div>
 					<div class="popup-form-title">URL проекта</div>
 					<input type="text" class="popup-form-input input-val" name="projectURL" placeholder="Добавьте ссылку">
 				</div>
 				<div class="popup-form-element">
+					<div class="qtip-container">
+						описание проекта
+						<div class="qtip-arrow"></div>
+					</div>
 					<div class="popup-form-title">Описание</div>
 					<textarea class=" popup-form-textarea input-val" name="projectDescr" placeholder="Пара слов о Вашем проекте"></textarea>
 				</div>

@@ -524,3 +524,43 @@ html, body{
 	padding-top: 7px;
 	text-align: center;
 }
+
+
+/*====================QTIP STYLES=================================================*/
+
+.qtip-container{
+	font-family: 'fira_sansbook';
+	font-size: 12px;
+	line-height: 10px;
+	color: #fff;
+	display: inline-block;
+	padding:8px 15px;
+	background: rgb(249, 126, 118);
+	position: absolute;
+	border-radius: 3px;
+	left: -143px;
+	top:35px;
+	width: 105px;
+	text-align: center;
+	display: none;
+
+}
+
+.qtip-arrow{
+	width: 0px;
+	height: 0px;
+	display: block;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-left: 10px solid rgb(249, 126, 118);
+	position: absolute;
+	top:3px;
+	right: -17px;
+}
+
+
+.qtip-error{
+	border: 1px solid rgb(249, 126, 118) !important;
+	background: rgb(249, 126, 118, 0.5) !important;
+}
