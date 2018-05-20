@@ -13,10 +13,10 @@ var validation = (function(){
 		$(element).siblings('.qtip-container').css({
 			display: 'inline-block'
 		});
-		console.log(element)
 		$(element).closest('.popup-form-input').siblings('.qtip-container').css({
 			display: 'inline-block'
 		});
+
 	};
 
 	var _removeError = function(){

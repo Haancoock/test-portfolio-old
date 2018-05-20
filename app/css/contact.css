@@ -25,9 +25,11 @@
 }
 .contact-info-container{
 	margin-bottom: 17px;
+	position: relative;
 }
 .contact-info-element{
 	width: 194px;
+	position: relative;
 }
 .contact-head-text{
 	display: block;
@@ -62,6 +64,7 @@
 .contact-info-textarea{
 	width: 100%;
 	margin-bottom: 11px;
+	position: relative;
 }
 .contact-msg{
 	resize: none;
@@ -164,3 +167,25 @@
 	cursor: pointer;
 }
 
+/*==================QTIP POSItION ==========================*/
+
+.top30{
+	position:absolute;
+	top: 30px !important;
+}
+
+
+.right-qtip{
+	left:201px !important;
+}
+
+.right-arrow{
+	border-left: 10px solid transparent !important;
+	border-right:10px solid rgb(249, 126, 118) !important;
+	right:132px !important;
+}
+
+.right-code-qtip{
+	left:411px !important;
+	top: 45px !important;
+}
