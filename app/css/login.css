@@ -40,6 +40,7 @@
 .login-form-element{
 	margin-left: 83px;
 	margin-bottom: 12px;
+	position: relative;
 }
 
 .login-form-inputname{
@@ -93,4 +94,13 @@
 .login-form-submit-button:active{
 	border-bottom: none;
 	border-top:3px solid #3ba8c0;
+}
+
+
+/*================QTIP POSITION======================*/
+
+.login-qtip{
+	width: 114px !important;
+	top: 72px !important;
+	left: -153px !important;
 }

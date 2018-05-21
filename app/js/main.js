@@ -26,6 +26,7 @@ var myModule = (function(){
 		});
 	};
 
+
 	var _closeAlerts = function(){
 		var closeButton = $('.close-alert');
 		closeButton.closest('.alert-box').hide();
@@ -35,6 +36,7 @@ var myModule = (function(){
 	var _imgUpload = function(e){
 		var imgText = $('.hide').val();
 		var imgVal = $('#img');
+		imgText = imgText.replace("C:\\fakepath\\", "");
 		imgVal.val(imgText);
 		console.log(imgText);
 	}
@@ -65,8 +67,8 @@ var myModule = (function(){
 			url = 'add_project.php',
 			servAnswer = _ajaxForm(url, form);
 
-
-		servAnswer.done(function(ans) {
+		if(servAnswer){
+			servAnswer.done(function(ans) {
 			console.log('servAnswer sucsess');
 			if (ans.mes === 'error') {
 				$('.popup-error-container').show();
@@ -76,8 +78,10 @@ var myModule = (function(){
 				$('.popup-addalert-content').show();
 				$('.popup-error-container').hide();
 				console.log('Всё прошло успешно, ухууу!');
-			}
-		});
+				}
+			});
+		}
+		
 	};
 
 	return{
