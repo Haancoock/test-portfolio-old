@@ -23,11 +23,36 @@ var contact = (function(){
 			url = 'contact_me.php',
 			defObj = _ajaxForm(form, url);
 
+		defObj.done(function(ans){
+			console.log('uhhhoooo');
+		})
+
 	};
 
 	var _ajaxForm = function(form, url){
 		if(!validation.validateForm(form)) return false;
+		var url = url,
+			data = form.serializeArray();
 
+
+		var objData = {};
+		$(data).each(function(index, obj){
+			objData[obj.name] = obj.value;
+		});
+		data = JSON.stringify(objData);
+
+		var result = $.ajax({
+			url: url,
+			type: 'POST',
+			data:{
+				data: data
+			},
+			dataType: 'Json'
+		}).fail(function(ans){
+			console.log(ans.mess);
+		})
+
+	return relust;
 
 	}
 

@@ -77,7 +77,7 @@
 				<section class="main-content">
 					<div class="main-content-container contact-container-padding">
 						<span class="contact-header">У вас интересный проект? Напишите мне</span>
-						<form action="" class="contact-content-form">
+						<form action="contact_me.php" class="contact-content-form">
 							<div class="contact-info-container clearfix">
 								<div class="contact-info-element float-left">
 									<div class="qtip-container top30">
@@ -85,7 +85,7 @@
 										<div class="qtip-arrow"></div>
 									</div>
 									<span class="contact-head-text">Имя</span>
-									<input type="text" class="contact-input" placeholder="Как к Вам обращаться">
+									<input type="text" class="contact-input" name="name" placeholder="Как к Вам обращаться">
 								</div>
 								<div class="contact-info-element float-right">
 									<div class="qtip-container top30 right-qtip">
@@ -93,7 +93,7 @@
 										<div class="qtip-arrow right-arrow"></div>
 									</div>
 									<span class="contact-head-text">Email</span>
-									<input type="text" class="contact-input" placeholder="Куда мне писать">
+									<input type="text" class="contact-input" name="email" placeholder="Куда мне писать">
 								</div>
 							</div>
 							<div class="contact-info-textarea">
@@ -102,7 +102,7 @@
 										<div class="qtip-arrow"></div>
 								</div>
 								<span class="contact-head-text">Сообщение</span>
-								<textarea name="" id="" cols="30" rows="10" class="contact-msg" placeholder="Кратко в чем суть"></textarea>
+								<textarea name="message" id="" cols="30" rows="10" class="contact-msg" placeholder="Кратко в чем суть"></textarea>
 							</div>
 							<div class="contact-info-container clearfix mbot">
 								<div class="qtip-container right-code-qtip">
@@ -111,7 +111,7 @@
 								</div>
 								<span class="contact-head-text pix17">Введите код, указанный на картинке</span>
 								<img src="" alt="" class="contact-captcha">
-								<input type="text" class="contact-captcha-code" placeholder="Введите код">
+								<input type="text" class="contact-captcha-code" name="code" placeholder="Введите код">
 							</div>
 							<div class="contact-buttons clearfix">
 								<input type="submit" class="contact-submit-button float-left" value="Отправить">

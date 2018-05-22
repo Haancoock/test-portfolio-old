@@ -18,6 +18,7 @@ var login = (function(){
 
 	var _ajaxForm = function(form, url){
 		if(!validation.validateForm(form)) return false;
+
 	}
 
 
