@@ -30,7 +30,7 @@ var contact = (function(){
 	};
 
 	var _ajaxForm = function(form, url){
-		if(!validation.validateForm(form)) return false;
+		// if(!validation.validateForm(form)) return false;
 		var url = url,
 			data = form.serializeArray();
 
