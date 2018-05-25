@@ -34,8 +34,7 @@
 				<span class="popup-title">Добавление проекта</span>
 				<img src="images/close-popup.png" alt="" class="popup-close b-close">
 			</div>
-			<form action="php/add_project.php" class="popup-form">
-				
+			<form action="php/add_project.php" class="popup-form" enctype="multipart/form-data" method="POST">
 				<div class="popup-error-container clearfix alert-box">
 					<div class="popup-error-text ">
 						<span class="popup-error-header-text">Ошибка!</span>
@@ -59,7 +58,7 @@
 					<div class="popup-form-title">Картинка проекта</div>
 					<div class="popup-form-input clearfix">
 						<input type="text" class="popup-form-input-value input-val" id="img" name="img"  placeholder="Загрузите изображение">
-						<input type="file" class="hide"  id="inputfile">
+						<input type="file" class="hide"  id="inputfile" name="file">
 						<label class="popup-form-input-file" for="inputfile"></label>
 					</div>
 				</div>

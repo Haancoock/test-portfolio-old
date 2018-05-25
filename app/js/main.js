@@ -42,7 +42,7 @@ var myModule = (function(){
 	}
 
 	var _ajaxForm = function(url, form){
-		if (!validation.validateForm(form)) return false;
+		// if (!validation.validateForm(form)) return false;
 		var url = url,
 			data = form.serialize();
 
@@ -64,7 +64,7 @@ var myModule = (function(){
 	var _addProject = function(e){
 		e.preventDefault();
 		var form = $(this),
-			url = 'add_project.php',
+			url = 'php/add_project.php',
 			servAnswer = _ajaxForm(url, form);
 
 		if(servAnswer){

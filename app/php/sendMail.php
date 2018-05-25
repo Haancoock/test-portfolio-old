@@ -18,7 +18,7 @@ $mail = new PHPMailer\PHPMailer\PHPMailer;                           // Passing 
     	$mail->AltBody = $body;
 
     	$mail->send();
-    		return('Message has been sent');
+    		return($body);
 		} catch (Exception $e) {
     		return('Message could not be sent. Mailer Error: ');
 			}

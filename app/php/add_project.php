@@ -5,11 +5,10 @@ $name = $_POST['projectName'];
 $url = $_POST['projectURL'];
 $descript = $_POST['projectDescr'];
 $file = $_POST['img'];
-
+print_r($_FILES);
 
 if ($name === '' || $url === '' || $file === '' || $descript === '' ) {
-
-	$data['mes'] = 'error';
+		$data['mes'] = 'error';
 }else{
 	$data['mes'] ='Ok';
 };
