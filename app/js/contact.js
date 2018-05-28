@@ -36,7 +36,7 @@ var contact = (function(){
 			},
 			dataType: 'Json'
 		}).fail(function(ans){
-			console.log('done');
+			console.log(ans);
 		})
 
 	return result;

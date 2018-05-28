@@ -7,7 +7,7 @@ var myModule = (function(){
 	
 	var _setUpListners = function(){
 		$('.work-site-add-container').on('click', _showPopup);
-		$('.popup-form').on('submit', _addProject);
+		$('.popup-form').submit(_addProject);
 		$('.hide').on('change', _imgUpload);
 		$('.close-alert').on('click', _closeAlerts);
 		};
@@ -44,13 +44,14 @@ var myModule = (function(){
 	var _ajaxForm = function(url, form){
 		// if (!validation.validateForm(form)) return false;
 		var url = url,
-			data = form.serialize();
+			data = new FormData(form);
 
 		var result = $.ajax({
 			url: url,
 			type: 'POST',
-			dataType: 'json',
-			data: data,
+			contentType: false,
+			processData: false,
+			data: data
 		}).fail(function(){
 			console.log('Проблемы в PHP');
 			$('.popup-error-container').show();
@@ -63,13 +64,15 @@ var myModule = (function(){
 
 	var _addProject = function(e){
 		e.preventDefault();
-		var form = $(this),
+		var form = $(this)[0],
 			url = 'php/add_project.php',
 			servAnswer = _ajaxForm(url, form);
 
 		if(servAnswer){
-			servAnswer.done(function(ans) {
+			servAnswer.done(function(data) {
+			var ans = jQuery.parseJSON(data);
 			console.log('servAnswer sucsess');
+			console.log(ans.mes);
 			if (ans.mes === 'error') {
 				$('.popup-error-container').show();
 				$('.popup-addalert-content').hide();

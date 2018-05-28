@@ -6,6 +6,7 @@ $url = $_POST['projectURL'];
 $descript = $_POST['projectDescr'];
 $file = $_POST['img'];
 print_r($_FILES);
+// print_r($_POST);
 
 if ($name === '' || $url === '' || $file === '' || $descript === '' ) {
 		$data['mes'] = 'error';
