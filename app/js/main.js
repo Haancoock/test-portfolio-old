@@ -42,7 +42,7 @@ var myModule = (function(){
 	}
 
 	var _ajaxForm = function(url, form){
-		// if (!validation.validateForm(form)) return false;
+		if (!validation.validateForm(form)) return false;
 		var url = url,
 			data = new FormData(form);
 
@@ -67,6 +67,7 @@ var myModule = (function(){
 		var form = $(this)[0],
 			url = 'php/add_project.php',
 			servAnswer = _ajaxForm(url, form);
+		
 
 		if(servAnswer){
 			servAnswer.done(function(data) {

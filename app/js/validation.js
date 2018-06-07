@@ -25,6 +25,7 @@ var validation = (function(){
 	}
 
 	var validateForm = function(form){
+		var form = $(form);
 		var elements = form.find('input, textarea').not('input[type="file"], input[type="hidden"]'),
 			valid = true;
 
