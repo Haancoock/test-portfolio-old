@@ -1,16 +1,23 @@
 <?php 
+require('config.php');
 $data = array();
-
+$image = new \claviska\SimpleImage();
 $name = $_POST['projectName'];
 $url = $_POST['projectURL'];
 $descript = $_POST['projectDescr'];
 $file = $_POST['img'];
 $fileD = $_FILES['file'];
+$gCaptcha = $_POST['g-recaptcha-response'];
+$captchaUrl = 'https://www.google.com/recaptcha/api/siteverify';
+$captchaKey = '6LfeYV4UAAAAAP6Y8SMAlEnNTi6wNijpW1OtgOld';
+$captchaQuery = $captchaUrl.'?secret='.$captchaKey.'&response='.$gCaptcha.'&remoteip='.$_SERVER['REMOTE_ADDR'];
+$gData = json_decode(file_get_contents($captchaQuery));
 
-if ($name === '' || $url === '' || $file === '' || $descript === '' || empty($fileD['name'])) {
+
+if ($name === '' || $url === '' || $file === '' || $descript === '' || empty($fileD['name']) || !$gCaptcha || $gData->success == false) {
 		$data['mes'] = 'error';
 }else{
-	
+
 	if (!file_exists('../files')) {
 		mkdir('../files', 777);
 	};
@@ -24,6 +31,7 @@ if ($name === '' || $url === '' || $file === '' || $descript === '' || empty($fi
 		$fileNameCopy = $fileName.'_copy';
 		//указание пути сохранения файла
 		$fileDist = $_SERVER['DOCUMENT_ROOT'].'/portf/test-portfolio-old/app/files/'.$fileName.$type;
+		$fileDistCopy = $_SERVER['DOCUMENT_ROOT'].'/portf/test-portfolio-old/app/files/'.$fileNameCopy.$type;
 		if($fileD['size'] == 0 || $fileD['size'] > 2097152){
 			$data['mes'] = 'error';
 		}else{
@@ -31,6 +39,8 @@ if ($name === '' || $url === '' || $file === '' || $descript === '' || empty($fi
 				$data['mes'] = 'error';
 			}else{
 				$data['mes'] = 'Ok';
+				$image -> fromFile($fileDist) -> resize(180, 135) -> toFile($fileDist);
+				
 			};
 		};
 	};
