@@ -1,6 +1,7 @@
 <?php
 
-require_once 'sendMail.php';
-require_once '../components/valitron/src/Valitron/Validator.php';
-require_once 'validation.php';
-require_once '../components/simpleImage.php';
+require_once '/opt/lampp/htdocs/portf/test-portfolio-old/app/php/sendMail.php';
+require_once '/opt/lampp/htdocs/portf/test-portfolio-old/app/components/valitron/src/Valitron/Validator.php';
+require_once '/opt/lampp/htdocs/portf/test-portfolio-old/app/php/validation.php';
+require_once '/opt/lampp/htdocs/portf/test-portfolio-old/app/components/simpleImage.php';
+require_once '/opt/lampp/htdocs/portf/test-portfolio-old/app/php/bd.php';

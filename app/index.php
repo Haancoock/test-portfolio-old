@@ -37,9 +37,9 @@
 				<aside class="sidebar">
 					<nav class="navigation">
 						<ul class="navigation-list">
-							<li class="navigation-list-item active-nav pix2"><a href="index.html" class="navigation-link active-nav">Обо мне</a></li>
-							<li class="navigation-list-item"><a href="works.html" class="navigation-link">Мои работы</a></li>
-							<li class="navigation-list-item"><a href="contact.html" class="navigation-link">Связаться со мной</a></li>
+							<li class="navigation-list-item active-nav pix2"><a href="index.php" class="navigation-link active-nav">Обо мне</a></li>
+							<li class="navigation-list-item"><a href="works.php" class="navigation-link">Мои работы</a></li>
+							<li class="navigation-list-item"><a href="contact.php" class="navigation-link">Связаться со мной</a></li>
 						</ul>
 					</nav>
 					<div class="contacts">

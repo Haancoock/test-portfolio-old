@@ -1,3 +1,4 @@
+<?php require_once('php/config.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -106,9 +107,9 @@
 				<aside class="sidebar">
 					<nav class="navigation">
 						<ul class="navigation-list">
-							<li class="navigation-list-item"><a href="index.html" class="navigation-link">Обо мне</a></li>
-							<li class="navigation-list-item active-nav pix2"><a href="works.html" class="navigation-link active-nav">Мои работы</a></li>
-							<li class="navigation-list-item"><a href="contact.html" class="navigation-link">Связаться со мной</a></li>
+							<li class="navigation-list-item"><a href="index.php" class="navigation-link">Обо мне</a></li>
+							<li class="navigation-list-item active-nav pix2"><a href="works.php" class="navigation-link active-nav">Мои работы</a></li>
+							<li class="navigation-list-item"><a href="contact.php" class="navigation-link">Связаться со мной</a></li>
 						</ul>
 					</nav>
 					<div class="contacts">
@@ -148,52 +149,35 @@
 					<span class="main-head">Мои работы</span>
 					<div class="underline"> </div>
 					<div class="works-container">
-						<div class="works-element-container">
-							<div class="work-site-container">
-								<div class="work-site-back">
-									<a href="123" class="site-works-link-in">www.site.com</a>
-								</div>
-							</div>
-							<a href="" class="works-site-link">www.site.ru</a>
-							<span class="works-site-descript">Информация о проекте 1 превью 2 строки</span>
-						</div>
-						<div class="works-element-container">
-							<div class="work-site-container">
-								<div class="work-site-back">
-									<a href="123" class="site-works-link-in">www.site.com</a>
-								</div>
-							</div>
-							<a href="" class="works-site-link">www.site.ru</a>
-							<span class="works-site-descript">Информация о проекте 1 превью 2 строки</span>
-						</div>
-						<div class="works-element-container">
-							<div class="work-site-container">
-								<div class="work-site-back">
-									<a href="123" class="site-works-link-in">www.site.com</a>
-								</div>
-							</div>
-							<a href="" class="works-site-link">www.site.ru</a>
-							<span class="works-site-descript">Информация о проекте 1 превью 2 строки</span>
-						</div>
-						<div class="works-element-container">
-							<div class="work-site-container">
-								<div class="work-site-back">
-									<a href="123" class="site-works-link-in">www.site.com</a>
-								</div>
-							</div>
-							<a href="" class="works-site-link">www.site.ru</a>
-							<span class="works-site-descript">Информация о проекте 1 превью 2 строки</span>
-						</div>
-						<div class="works-element-container">
-							<div class="work-site-container">
-								<div class="work-site-back">
-									<a href="123" class="site-works-link-in">www.site.com</a>
-								</div>
-							</div>
-							<a href="" class="works-site-link">www.site.ru</a>
-							<span class="works-site-descript">Информация о проекте 1 превью 2 строки</span>
-						</div>
+					<?php
 
+					$projData = 'SELECT * FROM projects';
+					$projRes = $DB->query($projData);
+
+					if($projRes->rowCount() > 0){
+						$projBlocks = array();
+						while ($row = $projRes->fetch()) {
+							$projBlocks[] = $row;
+						};
+					};
+
+					if (!empty($projBlocks)) {
+						foreach ($projBlocks as $value) {
+							echo '
+								<div class="works-element-container">
+									<div class="work-site-container" style="background-image:url('.'files'.strrchr($value['image'], '/').')">
+										<div class="work-site-back">
+											<a href="'.$value['url'].'" class="site-works-link-in">'.$value['name'].'</a>
+										</div>
+									</div>
+									<a href="'.$value['url'].'" class="works-site-link">'.$value['url'].'</a>
+									<span class="works-site-descript">'.$value['description'].'</span>
+								</div>
+									';
+						};
+					};
+					
+					?>
 						<div class="works-element-container">
 							<div class="work-site-add-container">
 								<a href="" class="work-site-add-link">

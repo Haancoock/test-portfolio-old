@@ -1,9 +1,7 @@
 <?php
 
 function sendEmail($name, $email, $sub, $body){
-require '../components/PHPMailer/src/PHPMailer.php';
-require '../components/PHPMailer/src/SMTP.php';
-require '../components/PHPMailer/src/Exception.php';
+require_once('config.php');
 
 $mail = new PHPMailer\PHPMailer\PHPMailer;                           // Passing `true` enables exceptions
 	try {
@@ -21,5 +19,5 @@ $mail = new PHPMailer\PHPMailer\PHPMailer;                           // Passing 
     		return($body);
 		} catch (Exception $e) {
     		return('Message could not be sent. Mailer Error: ');
-			}
-	}
+			};
+	};

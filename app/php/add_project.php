@@ -44,6 +44,8 @@ if ($name === '' || $url === '' || $file === '' || $descript === '' || empty($fi
 			};
 		};
 	};
+	$sql = 'INSERT INTO `projects`(`name`, `image`, `url`, `description`, `date`) VALUES("'.$name.'", "'.$fileDist.'", "'.$url.'", "'.$descript.'", NOW())';
+	$res = $DB->query($sql);
 };
 
 
