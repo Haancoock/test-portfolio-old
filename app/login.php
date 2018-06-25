@@ -1,7 +1,14 @@
+<?php
+ 	session_start();
+ 	if ($_SESSION['login'] === "admin" && $_SESSION['password']=== "admin") {
+ 		header('Location: index.php');
+ 	};
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="shortcut icon" type="image/gif"  href="images/favicon.ico">
 	<!--build:css css/vendor.min.css -->
 	<link rel="stylesheet" type="text/html" href="components/normalize.css">
@@ -23,7 +30,7 @@
 			<div class="login-container">
 				<div class="login-block">
 					<span class="login-head">Авторизируйтесь</span>
-					<form action="" class="login-form-container">
+					<form action="php/authorization.php" method="POST" class="login-form-container">
 						<div class="login-form-element">
 							<div class="qtip-container login-qtip">
 								Вы не ввели логин
@@ -32,7 +39,7 @@
 							<span class="login-form-inputname">
 								Логин
 							</span>
-							<input type="text" class="login-form-input" placeholder="Введите логин">
+							<input type="text" class="login-form-input" name="login" placeholder="Введите логин">
 						</div>
 						<div class="login-form-element">
 							<div class="qtip-container login-qtip">
@@ -42,7 +49,7 @@
 							<span class="login-form-inputname pix151">
 								Пароль
 							</span>
-							<input type="text" class="login-form-input" placeholder="Введите пароль">
+							<input type="text" class="login-form-input" name="password" placeholder="Введите пароль">
 						</div>
 						<div class="login-form-element">
 							<input class="login-form-submit-button" type="submit" value="Войти">

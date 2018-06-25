@@ -1,7 +1,6 @@
 <?php
-
-function sendEmail($name, $email, $sub, $body){
 require_once('config.php');
+function sendEmail($name, $email, $sub, $body){
 
 $mail = new PHPMailer\PHPMailer\PHPMailer;                           // Passing `true` enables exceptions
 	try {

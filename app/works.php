@@ -152,6 +152,7 @@
 					<?php
 
 					$projData = 'SELECT * FROM projects';
+					
 					$projRes = $DB->query($projData);
 
 					if($projRes->rowCount() > 0){
@@ -192,7 +193,7 @@
 		</main>
 		<footer class="footer">
 		<div class="main-container clearfix">
-			<a href="login.html" class="footer-lock"> </a>
+			<a href="login.php" class="footer-lock"> </a>
 			<span class="footer-copyright">&copy 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его</span>
 		</div>
 		
