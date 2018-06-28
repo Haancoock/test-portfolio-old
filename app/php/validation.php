@@ -4,9 +4,8 @@ function validateForm($data){
 	require_once 'config.php';
 
 	$v = new Valitron\Validator($data);
-	$v->rule('required', ['name', 'email', 'message', 'code']);
+	$v->rule('required', ['name', 'email', 'message', 'g-recaptcha-response']);
 	$v->rule('email', 'email');
-	$v->rule('integer', 'code');
 	if($v->validate()) {
     	echo "Yay! We're all good!";
 	}else {

@@ -19,6 +19,7 @@ session_start();
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Portfolio</title>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -78,6 +79,15 @@ session_start();
 					</div>
 				</aside>
 				<section class="main-content">
+					<div class="popup-addalert-content alert-box">
+						<div class="popup-addalert-container  clearfix">
+							<div class="popup-addalert-text ">
+								<span class="popup-addalert-header-text">Ура!</span>
+								<span class="popup-addalert-descript-text">Проект успешно добавлен.</span>
+							</div>
+							<img src="images/close-green.png" alt="" class="popup-error-close-button close-alert">
+						</div>
+					</div>
 					<div class="main-content-container contact-container-padding">
 						<span class="contact-header">У вас интересный проект? Напишите мне</span>
 						<form action="php/contact_me.php" class="contact-content-form">
@@ -108,13 +118,8 @@ session_start();
 								<textarea name="message" id="" cols="30" rows="10" class="contact-msg" placeholder="Кратко в чем суть"></textarea>
 							</div>
 							<div class="contact-info-container clearfix mbot">
-								<div class="qtip-container right-code-qtip">
-										Вы не ввели код
-										<div class="qtip-arrow right-arrow"></div>
-								</div>
-								<span class="contact-head-text pix17">Введите код, указанный на картинке</span>
-								<img src="" alt="" class="contact-captcha">
-								<input type="text" class="contact-captcha-code" name="code" placeholder="Введите код">
+								<span class="contact-head-text">Пройдите рекапчу</span>
+								<div class="g-recaptcha" data-sitekey="6LfeYV4UAAAAAP1-FnYbr6HrDwsACM4_ALDcoNx7"></div>
 							</div>
 							<div class="contact-buttons clearfix">
 								<input type="submit" class="contact-submit-button float-left" value="Отправить">

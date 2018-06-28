@@ -35,11 +35,19 @@ var contact = (function(){
 				data: data
 			},
 			dataType: 'Json'
-		}).fail(function(ans){
+		}).done(function(data){
+			ans = data;
 			console.log(ans);
+			if (ans.mess === "done") {
+				$('.popup-addalert-content').show();
+			}
+		})
+		.fail(function(data){
+			console.log(data);
 		})
 
-	return result;
+
+	// return result;
 
 	};
 
@@ -49,12 +57,6 @@ var contact = (function(){
 		var form = $(this),
 			url = 'php/contact_me.php',
 			defObj = _ajaxForm(form, url);
-
-		if(defObj){	
-			defObj.done(function(ans){
-				console.log(ans);
-			});
-		}
 	};
 
 

@@ -5,3 +5,4 @@ require_once '/opt/lampp/htdocs/portf/test-portfolio-old/app/components/valitron
 require_once '/opt/lampp/htdocs/portf/test-portfolio-old/app/php/validation.php';
 require_once '/opt/lampp/htdocs/portf/test-portfolio-old/app/components/simpleImage.php';
 require_once '/opt/lampp/htdocs/portf/test-portfolio-old/app/php/bd.php';
+require_once '/opt/lampp/htdocs/portf/test-portfolio-old/app/components/PHPMailer/src/PHPMailer.php';
