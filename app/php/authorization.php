@@ -9,20 +9,24 @@ $userData = $DB->prepare('SELECT login, password FROM admins');
 // $userData->bindParam(':login',$login);
 // $userData->bindParam(':password', $password);
 $userData->execute();
-$userRes = $userData->fetch();
+if ($userData->rowCount() > 0) {
+	$userResArray = array();
+	while ($row = $userData->fetch()) {
+		$userResArray[] = $row;
+	}
+}
 
-if (!$userRes) {
+if (!$userResArray) {
 	$data['mess'] = 'error in PDO';
 }else{
-	if ($userRes['login'] === $login && $userRes['password'] === $password) {
-		$data['mess'] = 'done';
-		$_SESSION['login'] = $login;
-		$_SESSION['password'] = $password;
-	}else{
-		$data['mess'] = 'error';
-	}
-	
-}
+	foreach ($userResArray as $value) {
+		if ($value['login'] === $login && $value['password'] === $password) {
+			$data['mess'] = 'done';
+			$_SESSION['login'] = $login;
+			$_SESSION['password'] = $password;
+		};
+	};
+};
 
 header("Content-Type", "application/JSON");
 echo json_encode($data);

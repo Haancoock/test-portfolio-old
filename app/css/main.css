@@ -515,6 +515,17 @@ html, body{
 .footer-lock:hover{
 	background-position: -138px -5px;
 }
+.footer-lock-active:hover{
+	background-position: -168px -5px;
+}
+.footer-lock-active{
+	float: left;
+	width: 20px;
+	height: 32px;
+	background-image:url(../images/sprite.png);
+	background-position: -138px -5px;
+	margin-left: 31px;
+}
 
 .footer-copyright{
 	font-family: 'fira_sanslight';

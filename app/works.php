@@ -1,4 +1,7 @@
-<?php require_once('php/config.php'); ?>
+<?php 
+require_once('php/config.php');
+session_start();		
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -177,15 +180,19 @@
 									';
 						};
 					};
-					
+					if($_SESSION){
+						if($_SESSION['login'] === "admin" && $_SESSION['password'] === "admin"){
+							echo('
+								<div class="works-element-container">
+									<div class="work-site-add-container">
+										<a href="" class="work-site-add-link">
+										<img src="images/add-proj.png" alt="" class="work-site-add-img">
+									Добавить проект</a>
+									</div>
+								</div>');
+						};
+					};
 					?>
-						<div class="works-element-container">
-							<div class="work-site-add-container">
-								<a href="" class="work-site-add-link">
-								<img src="images/add-proj.png" alt="" class="work-site-add-img">
-								Добавить проект</a>
-							</div>
-						</div>
 					</div>
 					</div>
 				</section>
@@ -193,7 +200,17 @@
 		</main>
 		<footer class="footer">
 		<div class="main-container clearfix">
-			<a href="login.php" class="footer-lock"> </a>
+			<?php
+			if($_SESSION){
+				if($_SESSION['login'] === "admin" && $_SESSION['password'] === "admin"){
+					echo('<a href="login.php" class="footer-lock-active"></a>');
+				}else{
+					echo('<a href="login.php" class="footer-lock"></a>');
+				};
+			}else{
+				echo('<a href="login.php" class="footer-lock"></a>');
+			};
+			 ?>	
 			<span class="footer-copyright">&copy 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его</span>
 		</div>
 		

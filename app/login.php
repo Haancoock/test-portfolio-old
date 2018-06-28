@@ -1,8 +1,6 @@
 <?php
- 	session_start();
- 	if ($_SESSION['login'] === "admin" && $_SESSION['password']=== "admin") {
- 		header('Location: index.php');
- 	};
+	session_start();
+ 	print_r($_SESSION);
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,7 +60,19 @@
 
 		<footer class="footer">
 		<div class="main-container clearfix">
-			<a href="login.html" class="footer-lock"></a>
+			<?php
+			if($_SESSION){
+				if($_SESSION['login'] === "admin" && $_SESSION['password'] === "admin"){
+					echo('<a href="login.php" class="footer-lock-active"></a>');
+				}else{
+					echo('<a href="login.php" class="footer-lock"></a>');
+				};
+			}else{
+				echo('<a href="login.php" class="footer-lock"></a>');
+			};
+			session_destroy();
+			 ?>	
+			
 			<span class="footer-copyright">&copy 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его</span>
 		</div>
 	</footer>
