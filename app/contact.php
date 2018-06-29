@@ -82,8 +82,8 @@ session_start();
 					<div class="popup-addalert-content alert-box">
 						<div class="popup-addalert-container  clearfix">
 							<div class="popup-addalert-text ">
-								<span class="popup-addalert-header-text">Ура!</span>
-								<span class="popup-addalert-descript-text">Проект успешно добавлен.</span>
+								<span class="popup-addalert-header-text">Готово!</span>
+								<span class="popup-addalert-descript-text">Сообщение успешно отправлено.</span>
 							</div>
 							<img src="images/close-green.png" alt="" class="popup-error-close-button close-alert">
 						</div>

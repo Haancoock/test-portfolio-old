@@ -19,21 +19,12 @@ var contact = (function(){
 	var _ajaxForm = function(form, url){
 		if(!validation.validateForm(form)) return false;
 		var url = url,
-			data = form.serializeArray();
-
-
-		var objData = {};
-		$(data).each(function(index, obj){
-			objData[obj.name] = obj.value;
-		});
-		data = JSON.stringify(objData);
+			data = form.serialize();
 
 		var result = $.ajax({
 			url: url,
 			type: 'POST',
-			data:{
-				data: data
-			},
+			data:data,
 			dataType: 'Json'
 		}).done(function(data){
 			ans = data;
@@ -45,9 +36,6 @@ var contact = (function(){
 		.fail(function(data){
 			console.log(data);
 		})
-
-
-	// return result;
 
 	};
 

@@ -13,7 +13,7 @@ var login = (function(){
 		form = $(this);
 		url = "php/authorization.php";
 		defObj = _ajaxForm(form, url);
-		};
+	};
 
 
 	var _ajaxForm = function(form, url){

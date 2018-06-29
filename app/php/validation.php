@@ -7,7 +7,7 @@ function validateForm($data){
 	$v->rule('required', ['name', 'email', 'message', 'g-recaptcha-response']);
 	$v->rule('email', 'email');
 	if($v->validate()) {
-    	echo "Yay! We're all good!";
+    	// echo "Yay! We're all good!";
 	}else {
     	// Errors
     	print_r($v->errors());
