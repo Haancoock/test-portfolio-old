@@ -3,7 +3,7 @@ require_once('php/config.php');
 session_start();		
  ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<link rel="shortcut icon" type="image/gif"  href="images/favicon.ico">
@@ -61,7 +61,7 @@ session_start();
 						<div class="qtip-arrow"></div>
 					</div>
 					<div class="popup-form-title">Картинка проекта</div>
-					<div class="popup-form-input clearfix">
+					<div class="popup-form-input-hide clearfix">
 						<input type="text" class="popup-form-input-value input-val" id="img" name="img"  placeholder="Загрузите изображение">
 						<input type="file" class="hide"  id="inputfile" name="file">
 						<label class="popup-form-input-file" for="inputfile"></label>
@@ -94,7 +94,7 @@ session_start();
 
 		<header class="header">
 			<div class="container clearfix">
-				<a href="index.html" class="logo">
+				<a href="index.php" class="logo">
 					<img src="images/logo.png" alt="" class="logo-img">
 				</a>
 				<ul class="socials">

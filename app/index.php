@@ -2,7 +2,7 @@
 session_start();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<link rel="shortcut icon" type="image/gif"  href="images/favicon.ico">
@@ -24,7 +24,7 @@ session_start();
 	<div class="wrapper">
 		<header class="header">
 			<div class="container clearfix">
-				<a href="index.html" class="logo">
+				<a href="index.php" class="logo">
 					<img src="images/logo.png" alt="" class="logo-img">
 				</a>
 				<ul class="socials">
@@ -139,8 +139,6 @@ session_start();
 						</div>
 
 					</div>
-						
-					</div> 
 				</section>
 
 		</main>

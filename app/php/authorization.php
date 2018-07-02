@@ -6,8 +6,6 @@ $login = $_POST['login'];
 $password = $_POST['password'];
 
 $userData = $DB->prepare('SELECT login, password FROM admins');
-// $userData->bindParam(':login',$login);
-// $userData->bindParam(':password', $password);
 $userData->execute();
 if ($userData->rowCount() > 0) {
 	$userResArray = array();

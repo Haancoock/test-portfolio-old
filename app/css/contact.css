@@ -41,12 +41,13 @@
 }
 
 .contact-input{
-	width: 183px;
+	width: 174px;
 	height: 37px;
 	border:1px solid #48cbe8;
 	outline: none;
 	border-radius: 3px;
 	padding-left: 9px;
+	padding-right: 9px;
 }
 
 .contact-input::placeholder{
