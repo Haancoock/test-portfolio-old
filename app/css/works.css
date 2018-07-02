@@ -203,6 +203,7 @@
 	background: #fff;
 	outline: none;
 	padding-left: 9px;
+	overflow: hidden;
 }
 
 .popup-form-input-file{

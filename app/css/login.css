@@ -99,8 +99,8 @@
 
 /*================QTIP POSITION======================*/
 
-.login-qtip{
-	width: 114px !important;
-	top: 72px !important;
-	left: -153px !important;
+.login-form-element .login-qtip{
+	width: 114px ;
+	top: 72px;
+	left: -153px;
 }

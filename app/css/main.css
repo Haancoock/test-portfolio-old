@@ -571,7 +571,7 @@ html, body{
 }
 
 
-.qtip-error{
-	border: 1px solid rgb(249, 126, 118) !important;
-	background: rgb(249, 126, 118, 0.5) !important;
+div .qtip-error{
+	border: 1px solid rgb(249, 126, 118);
+	background: rgb(249, 126, 118, 0.5);
 }

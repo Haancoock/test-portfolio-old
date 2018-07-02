@@ -16,6 +16,9 @@ var validation = (function(){
 		$(element).closest('.popup-form-input').siblings('.qtip-container').css({
 			display: 'inline-block'
 		});
+		$(element).closest('.popup-form-input-hide').siblings('.qtip-container').css({
+			display: 'inline-block'
+		});
 
 	};
 
@@ -34,6 +37,7 @@ var validation = (function(){
 				val = $.trim(element.val());
 
 			if(val.length === 0 ){
+				element.closest('.popup-form-input-hide').addClass('qtip-error');
 				element.not('#img').addClass('qtip-error');
 				element.closest('.popup-form-input').addClass('qtip-error');
 				_createQtip(element);

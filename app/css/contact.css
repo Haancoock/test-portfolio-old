@@ -166,23 +166,18 @@
 
 /*==================QTIP POSItION ==========================*/
 
-.top30{
+.contact-info-element .top30{
 	position:absolute;
-	top: 30px !important;
+	top: 30px;
 }
 
 
-.right-qtip{
-	left:201px !important;
+.contact-info-element .right-qtip{
+	left:201px;
 }
 
-.right-arrow{
-	border-left: 10px solid transparent !important;
-	border-right:10px solid rgb(249, 126, 118) !important;
-	right:132px !important;
-}
-
-.right-code-qtip{
-	left:411px !important;
-	top: 45px !important;
+.right-qtip .right-arrow{
+	border-left: 10px solid transparent ;
+	border-right:10px solid rgb(249, 126, 118) ;
+	right:132px;
 }
