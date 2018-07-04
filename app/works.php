@@ -152,6 +152,15 @@ session_start();
 					<span class="main-head">Мои работы</span>
 					<div class="underline"> </div>
 					<div class="works-container">
+						<div class="works-element-container">
+							<div class="work-site-container">
+								<div class="work-site-back">
+									<a href="test" class="site-works-link-in">Test</a>
+								</div>
+							</div>
+							<a href="test" class="works-site-link">Test</a>
+							<span class="works-site-descript">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </span>
+						</div>
 					<?php
 
 					$projData = 'SELECT * FROM projects';
